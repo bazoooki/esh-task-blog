@@ -1,9 +1,11 @@
+'use client';
 import Logo from "@/components/Logo";
 import Link from "next/link";
-import {GlobeAltIcon} from "@heroicons/react/24/outline";
-
+import {useTranslations} from 'next-intl';
+import TranslationMenu from "@/components/TranslationMenu";
 
 export default function NavBar() {
+  const t = useTranslations('NavBar');
   return (
     <div className="w-full flex justify-between items-center bg-transparent w-full   px-6 py-2">
       <div className="items-center flex space-x-6">
@@ -15,18 +17,18 @@ export default function NavBar() {
             href="/"
             className="text-sm transition-colors text-slate-900 hover:text-slate-500"
           >
-            Home
+            {t('home')}
           </Link>
           <Link
             href="/blog"
             className="text-sm transition-colors text-slate-900 hover:text-slate-500"
           >
-            Blog
+            {t('blog')}
           </Link>
         </div>
       </div>
       <div>
-        <GlobeAltIcon className="w-6 h-6 text-slate-600" />
+        <TranslationMenu />
       </div>
     </div>
   )

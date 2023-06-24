@@ -1,0 +1,17 @@
+{
+  "Post": {
+    "backButton": "Back",
+    "stayUp": "Stay up to date with our latest news",
+    "subscribe": "SUBSCRIBE",
+    "emailPlaceholder": "Enter your email address",
+    "note": "By submitting my email address, I agree to receive marketing emails, newsletters and updates."
+  },
+  "Home": {
+    "title": "A new bank is coming",
+    "readLatest": "Read Latest Updates"
+  },
+  "NavBar": {
+    "home": "home",
+    "blog": "blog"
+  }
+}
