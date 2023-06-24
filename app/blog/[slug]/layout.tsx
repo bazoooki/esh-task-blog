@@ -1,6 +1,4 @@
-
-
-export default function PostLayout (
+export default function PostLayout(
   {
     children,
   }: {
@@ -8,9 +6,10 @@ export default function PostLayout (
   }) {
   return (
     <div className="flex justify-center w-full">
-      <div className="w-full max-w-4xl">
-      {children}
+      <div className="w-full max-w-4xl mt-20">
+        {children}
       </div>
+
     </div>
   )
 }

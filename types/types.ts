@@ -2,7 +2,8 @@ interface PostAuthor {
   name: string;
   role: string;
 }
-export interface Post{
+
+export interface Post {
   id: number;
   slug: string;
   title: string;
