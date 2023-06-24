@@ -7,14 +7,15 @@ import TranslationMenu from "@/components/TranslationMenu";
 export default function NavBar({locale}: { locale: string }) {
   const t = useTranslations('NavBar');
 
+  const isHebrew = locale === 'il';
   return (
     <div
-      className={`w-full flex justify-between items-center bg-transparent w-full   px-6 py-2 ${locale === 'il' ? 'flex-row-reverse' : 'flex-row'}`}>
-      <div className={`items-center flex space-x-6 ${locale === 'il' ? 'flex-row-reverse' : 'flex-row'}`}>
+      className={`w-full flex justify-between items-center bg-transparent w-full   px-6 py-2 ${isHebrew ? 'flex-row-reverse' : 'flex-row'}`}>
+      <div className={`items-center flex space-x-6 ${isHebrew ? 'flex-row-reverse' : 'flex-row'}`}>
         <div className="-mt-2">
           <Logo/>
         </div>
-        <div className={`flex items-center space-x-12 pr-12`}>
+        <div className={`flex items-center space-x-12 pr-12 ${isHebrew ? 'flex-row-reverse space-x-reverse' : 'flex-row'}`}>
           <Link
             href="/"
             className="text-sm transition-colors text-slate-900 hover:text-slate-500"

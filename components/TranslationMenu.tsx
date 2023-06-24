@@ -11,7 +11,7 @@ export default function TranslationMenu() {
   const locale = useLocale()
   const t = useTranslations('TranslationMenu');
   return (
-    <div className="fixed w-34 -mt-3">
+    <div className="relative w-34 -mt-3">
       <Menu>
         <Menu.Button><GlobeAltIcon className="w-6 h-6 text-slate-600"/></Menu.Button>
         <Transition
