@@ -4,13 +4,14 @@ import {GlobeAltIcon} from "@heroicons/react/24/outline";
 import {Fragment} from 'react'
 import Link from 'next-intl/link';
 import {usePathname} from "next-intl/client";
-import {useLocale} from "next-intl";
+import {useLocale, useTranslations} from "next-intl";
 
 export default function TranslationMenu() {
   const pathname = usePathname();
   const locale = useLocale()
+  const t = useTranslations('TranslationMenu');
   return (
-    <div className="fixed w-34 ">
+    <div className="fixed w-34 -mt-3">
       <Menu>
         <Menu.Button><GlobeAltIcon className="w-6 h-6 text-slate-600"/></Menu.Button>
         <Transition
@@ -32,7 +33,7 @@ export default function TranslationMenu() {
                           (active || locale=== 'en') ? 'text-primary' : 'text-gray-900'
                         } group flex w-full items-center rounded-md px-2 py-2 text-sm transition-colors`}
                   >
-                    English
+                    {t('english')}
                   </Link>
                 )}
               </Menu.Item>
@@ -43,7 +44,7 @@ export default function TranslationMenu() {
                           (active || locale=== 'il') ? 'text-primary' : 'text-gray-900'
                         } group flex w-full items-center rounded-md px-2 py-2 text-sm transition-colors`}
                   >
-                    Hebrew
+                    {t('hebrew')}
                   </Link>
                 )}
               </Menu.Item>

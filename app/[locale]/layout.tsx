@@ -30,7 +30,7 @@ export default async function LocaleLayout({children, params}: Props) {
     <main
       className="flex min-h-screen flex-col relative overflow-hidden items-center  p-6 lg:px-24 bg-fuchsia-100 bg-opacity-60">
       <NextIntlClientProvider locale={locale} messages={messages}>
-        <NavBar/>
+        <NavBar locale={locale}/>
         <div className="flex flex-col flex-1 w-full z-10 max-w-7xl">
           <div className="flex-1 z-10 flex flex-col w-full ">
             {children}

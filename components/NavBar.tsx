@@ -4,15 +4,17 @@ import Link from "next/link";
 import {useTranslations} from 'next-intl';
 import TranslationMenu from "@/components/TranslationMenu";
 
-export default function NavBar() {
+export default function NavBar({locale}: { locale: string }) {
   const t = useTranslations('NavBar');
+
   return (
-    <div className="w-full flex justify-between items-center bg-transparent w-full   px-6 py-2">
-      <div className="items-center flex space-x-6">
+    <div
+      className={`w-full flex justify-between items-center bg-transparent w-full   px-6 py-2 ${locale === 'il' ? 'flex-row-reverse' : 'flex-row'}`}>
+      <div className={`items-center flex space-x-6 ${locale === 'il' ? 'flex-row-reverse' : 'flex-row'}`}>
         <div className="-mt-2">
           <Logo/>
         </div>
-        <div className="flex items-center space-x-12 ">
+        <div className={`flex items-center space-x-12 pr-12`}>
           <Link
             href="/"
             className="text-sm transition-colors text-slate-900 hover:text-slate-500"
@@ -28,7 +30,7 @@ export default function NavBar() {
         </div>
       </div>
       <div>
-        <TranslationMenu />
+        <TranslationMenu/>
       </div>
     </div>
   )

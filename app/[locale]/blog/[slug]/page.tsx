@@ -1,6 +1,6 @@
 import {Post} from "@/types/types";
 import getPost from "@/lib/getPost";
-import BlogPost from "@/components/BlogPost";
+import PostContent from "@/components/PostContent";
 
 export default async function Post({params}: { params: { slug: string } }) {
   const post: Post = await getPost(params.slug)
@@ -10,6 +10,6 @@ export default async function Post({params}: { params: { slug: string } }) {
   }
 
   return <div className="flex flex-col space-y-4 text-xl relative">
-    <BlogPost post={post} />
+    <PostContent post={post} />
   </div>
 }

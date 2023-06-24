@@ -9,7 +9,7 @@ import {Input} from "@/components/Input";
 import {useTranslations} from "next-intl";
 import type {Post} from "@/types/types";
 
-export default function BlogPost({post}: { post: Post }) {
+export default function PostContent({post}: { post: Post }) {
 
   const t = useTranslations('Post')
 

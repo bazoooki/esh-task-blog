@@ -13,5 +13,9 @@
   "NavBar": {
     "home": "home",
     "blog": "blog"
+  },
+  "TranslationMenu": {
+    "english": "English",
+    "hebrew": "Hebrew"
   }
 }

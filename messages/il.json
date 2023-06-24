@@ -13,5 +13,9 @@
   "NavBar": {
     "home": "ראשי",
     "blog": "בלוג"
+  },
+  "TranslationMenu": {
+    "english": "אנגלית",
+    "hebrew": "עברית"
   }
 }
