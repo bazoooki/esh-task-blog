@@ -3,11 +3,12 @@ import Logo from "@/components/Logo";
 import Link from "next/link";
 import {useTranslations} from 'next-intl';
 import TranslationMenu from "@/components/TranslationMenu";
+import {IL} from "@/lib/lang.constant";
 
 export default function NavBar({locale}: { locale: string }) {
   const t = useTranslations('NavBar');
 
-  const isHebrew = locale === 'il';
+  const isHebrew = locale === IL;
   return (
     <div
       className={`w-full flex justify-between items-center bg-transparent w-full z-20  px-6 py-2 ${isHebrew ? 'flex-row-reverse' : 'flex-row'}`}>

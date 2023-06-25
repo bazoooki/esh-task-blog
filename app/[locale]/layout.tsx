@@ -4,7 +4,7 @@ import {useLocale} from 'next-intl';
 import {ReactNode} from 'react';
 import NavBar from "@/components/NavBar";
 import {NextIntlClientProvider} from 'next-intl';
-import Link from "next/link";
+import Footer from "@/components/Footer";
 
 type Props = {
   children: ReactNode;
@@ -37,10 +37,7 @@ export default async function LocaleLayout({children, params}: Props) {
             {children}
           </div>
           <div className="py-6 border-t border-slate-900 z-10 w-full">
-            <footer className="flex flex-col space-y-4">
-              <Link href="/policy" className="text-xs text-slate-800 hover:text-slate-600">Privacy policy</Link>
-              <Link href="/policy" className="text-xs text-slate-800 hover:text-slate-600">Accessibility Statement</Link>
-            </footer>
+            <Footer/>
           </div>
         </div>
       </NextIntlClientProvider>

@@ -5,6 +5,7 @@ import {Fragment} from 'react'
 import Link from 'next-intl/link';
 import {usePathname} from "next-intl/client";
 import {useLocale, useTranslations} from "next-intl";
+import {EN, IL} from "@/lib/lang.constant";
 
 export default function TranslationMenu() {
   const pathname = usePathname();
@@ -28,9 +29,9 @@ export default function TranslationMenu() {
             <div className="px-1 py-1 ">
               <Menu.Item>
                 {({active}) => (
-                  <Link href={pathname} locale="en"
+                  <Link href={pathname} locale={EN}
                         className={`${
-                          (active || locale=== 'en') ? 'text-primary' : 'text-gray-900'
+                          (active || locale=== EN) ? 'text-primary' : 'text-gray-900'
                         } group flex w-full items-center rounded-md px-2 py-2 text-sm transition-colors`}
                   >
                     {t('english')}
@@ -39,9 +40,9 @@ export default function TranslationMenu() {
               </Menu.Item>
               <Menu.Item>
                 {({active}) => (
-                  <Link href={pathname} locale="il"
+                  <Link href={pathname} locale={IL}
                         className={`${
-                          (active || locale=== 'il') ? 'text-primary' : 'text-gray-900'
+                          (active || locale=== IL) ? 'text-primary' : 'text-gray-900'
                         } group flex w-full items-center rounded-md px-2 py-2 text-sm transition-colors`}
                   >
                     {t('hebrew')}

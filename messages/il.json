@@ -17,5 +17,9 @@
   "TranslationMenu": {
     "english": "אנגלית",
     "hebrew": "עברית"
+  },
+  "Footer": {
+    "accessibility": "הצהרת נגישות",
+    "privacy": "מדיניות פרטיות"
   }
 }
