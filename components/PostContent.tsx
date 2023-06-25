@@ -18,7 +18,7 @@ export default function PostContent({post}: { post: Post }) {
   }
   return (
     <div>
-      <div>
+      <div className="text-start">
         <Link href="/blog" className={clsx(buttonVariants({size: 'xs', variant: 'ghost'}), '-ml-5')}>
           <ChevronLeftIcon className="w-6 h-6 "/> {t('backButton')}
         </Link>
